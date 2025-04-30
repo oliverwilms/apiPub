@@ -87,7 +87,7 @@ http://localhost:52773/swagger-ui/index.html?url=http://localhost:52773/apiPub/w
 **or**
 
 ```
-http://{host:port}/swagger-ui/index.html?url=http://{host:port}/apiPub/wizard/oas/{namespace}/_spec
+http://{host:port}/swagger-ui/index.html?url=http://{host:port}/apiPub/wizard/{namespace}/_spec
 ```
 <img src="docResources/wizard.png" alt="wizard" width="400"/>
 
