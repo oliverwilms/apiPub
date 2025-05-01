@@ -1,1 +1,152 @@
-{"openapi":"3.0.0","info":{"title":"API Title","description":"API Description","version":"1.0.0","termsOfService":"http://swagger.io/terms/","contact":{"email":"apiteam@swagger.io"},"license":{"name":"Apache 2.0","url":"http://www.apache.org/licenses/LICENSE-2.0.html"}},"tags":[{"name":"package.name.api"}],"paths":{"/ClassMethodName":{"get":{"tags":["package.name.api"],"summary":"Description","description":"ClassMethodName - Description","operationId":"ClassMethodName","parameters":[{"in":"query","name":"param","schema":{"type":"string"}}],"responses":{"200":{"description":"successful operation","headers":{"iris-statuscode":{"description":"1 For Success and 0 For Error","schema":{"type":"integer","format":"int32"}},"iris-statusmessage":{"description":"Display the error text for statuscode","schema":{"type":"string"}},"iris-errorcode":{"description":"Return an error status code with the error as specified by the internal errorcode","schema":{"type":"integer","format":"int32"}}}},"500":{"headers":{"iris-statuscode":{"description":"0 For Error","schema":{"type":"integer","format":"int32"}},"iris-statusmessage":{"description":"Display the error text for statuscode","schema":{"type":"string"}},"iris-errorcode":{"description":"Return an error status code with the error as specified by the internal errorcode","schema":{"type":"integer","format":"int32"}}},"content":{"application/json":{"schema":{"$ref":"#/components/schemas/responseStatus"}}},"description":"Internal Server Error"}},"security":[{"basicAuth":[]}]}},"/MethodName":{"post":{"tags":["package.name.api"],"summary":"Description","description":"MethodName - Description","operationId":"MethodName","responses":{"200":{"description":"successful operation","headers":{"iris-statuscode":{"description":"1 For Success and 0 For Error","schema":{"type":"integer","format":"int32"}},"iris-statusmessage":{"description":"Display the error text for statuscode","schema":{"type":"string"}},"iris-errorcode":{"description":"Return an error status code with the error as specified by the internal errorcode","schema":{"type":"integer","format":"int32"}}}},"500":{"headers":{"iris-statuscode":{"description":"0 For Error","schema":{"type":"integer","format":"int32"}},"iris-statusmessage":{"description":"Display the error text for statuscode","schema":{"type":"string"}},"iris-errorcode":{"description":"Return an error status code with the error as specified by the internal errorcode","schema":{"type":"integer","format":"int32"}}},"content":{"application/json":{"schema":{"$ref":"#/components/schemas/responseStatus"}}},"description":"Internal Server Error"}},"security":[{"basicAuth":[]}],"requestBody":{"description":"Body Request Content","content":{"application/json":{"schema":{"type":"object"}}}}}}},"components":{"schemas":{"responseStatus":{"type":"object","properties":{"statusCode":{"type":"integer"},"message":{"type":"string"},"errorCode":{"type":"integer"}}}},"securitySchemes":{"basicAuth":{"type":"http","scheme":"basic"}}},"externalDocs":{"description":"Find out more about Swagger","url":"http://swagger.io"},"servers":[{"url":"http://11.123.6.69:52773/IRISAPP/myApi","description":"http server"},{"url":"https://11.123.6.69:52773/IRISAPP/myApi","description":"https server"}]}
+openapi: 3.0.0
+info:
+  title: API Title
+  description: API Description
+  version: 1.0.0
+  termsOfService: 'http://swagger.io/terms/'
+  contact:
+    email: apiteam@swagger.io
+  license:
+    name: Apache 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+tags:
+  - name: package.name.api
+paths:
+  /ClassMethodName:
+    get:
+      tags:
+        - package.name.api
+      summary: Description
+      description: ClassMethodName - Description
+      operationId: ClassMethodName
+      parameters:
+        - in: query
+          name: param
+          schema:
+            type: string
+      responses:
+        '200':
+          description: successful operation
+          headers:
+            iris-statuscode:
+              description: 1 For Success and 0 For Error
+              schema:
+                type: integer
+                format: int32
+            iris-statusmessage:
+              description: Display the error text for statuscode
+              schema:
+                type: string
+            iris-errorcode:
+              description: >-
+                Return an error status code with the error as specified by the
+                internal errorcode
+              schema:
+                type: integer
+                format: int32
+        '500':
+          headers:
+            iris-statuscode:
+              description: 0 For Error
+              schema:
+                type: integer
+                format: int32
+            iris-statusmessage:
+              description: Display the error text for statuscode
+              schema:
+                type: string
+            iris-errorcode:
+              description: >-
+                Return an error status code with the error as specified by the
+                internal errorcode
+              schema:
+                type: integer
+                format: int32
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/responseStatus'
+          description: Internal Server Error
+      security:
+        - basicAuth: []
+  /MethodName:
+    post:
+      tags:
+        - package.name.api
+      summary: Description
+      description: MethodName - Description
+      operationId: MethodName
+      responses:
+        '200':
+          description: successful operation
+          headers:
+            iris-statuscode:
+              description: 1 For Success and 0 For Error
+              schema:
+                type: integer
+                format: int32
+            iris-statusmessage:
+              description: Display the error text for statuscode
+              schema:
+                type: string
+            iris-errorcode:
+              description: >-
+                Return an error status code with the error as specified by the
+                internal errorcode
+              schema:
+                type: integer
+                format: int32
+        '500':
+          headers:
+            iris-statuscode:
+              description: 0 For Error
+              schema:
+                type: integer
+                format: int32
+            iris-statusmessage:
+              description: Display the error text for statuscode
+              schema:
+                type: string
+            iris-errorcode:
+              description: >-
+                Return an error status code with the error as specified by the
+                internal errorcode
+              schema:
+                type: integer
+                format: int32
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/responseStatus'
+          description: Internal Server Error
+      security:
+        - basicAuth: []
+      requestBody:
+        description: Body Request Content
+        content:
+          application/json:
+            schema:
+              type: object
+components:
+  schemas:
+    responseStatus:
+      type: object
+      properties:
+        statusCode:
+          type: integer
+        message:
+          type: string
+        errorCode:
+          type: integer
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+externalDocs:
+  description: Find out more about Swagger
+  url: 'http://swagger.io'
+servers:
+  - url: 'http://11.123.6.69:52773/IRISAPP/myApi'
+    description: http server
+  - url: 'https://11.123.6.69:52773/IRISAPP/myApi'
+    description: https server
